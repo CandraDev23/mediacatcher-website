@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Media Catcher</title>
+    <!-- Tailwind CSS -->
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <!-- Desktop Navbar (your existing code) -->
+    <nav class="fixed top-0 left-0 right-0 bg-white px-7 hidden py-4 md:flex items-center z-50">
+        <a href="#" class="lg:text-2xl text-lg font-bold flex space-x-px">
+            <span class="text-gray-900">Media</span>
+            <span class="text-green-teal">Catcher</span>
+        </a>
+        <div class="space-x-8 md:ml-auto md:mr-0 mx-auto">
+            <a href="#" class="font-bold hover:text-black/50">Home</a>
+            <a href="#" class="hover:text-black/50">Pricing</a>
+            <a href="#" class="hover:text-black/50">Features</a>
+            <a href="#" class="hover:text-black/50">About</a>
+            <a href="#" class="hover:text-black/50">Contact</a>
+        </div>
+        <div class="lg:pl-12 md:pl-6">
+            <a href="#" class="py-2.5 px-10 text-white bg-gray-900 transition duration-300 ease-in-out hover:bg-gray-700 rounded-md">Login</a>
+        </div>
+    </nav>
+
+    <!-- Mobile Navbar -->
+    <nav class="fixed top-0 left-0 right-0 bg-white px-4 py-4 md:hidden flex items-center justify-between border-b z-50">
+        <!-- Logo -->
+        <a href="#" class="text-xl font-bold flex space-x-px">
+            <span class="text-gray-900">Media</span>
+            <span class="text-green-teal">Catcher</span>
+        </a>
+        
+        <!-- Hamburger Menu Button -->
+        <button id="mobile-menu-button" class="flex flex-col w-6 h-5 justify-between">
+            <span class="block w-6 h-0.5 bg-gray-900 transition-all duration-300 ease-in-out"></span>
+            <span class="block w-6 h-0.5 bg-gray-900 transition-all duration-300 ease-in-out"></span>
+            <span class="block w-6 h-0.5 bg-gray-900 transition-all duration-300 ease-in-out"></span>
+        </button>
+    </nav>
+
+    <!-- Mobile Menu Overlay -->
+    <div id="mobile-menu" class="fixed top-0 left-0 w-full h-full bg-white z-40 md:hidden transform -translate-x-full transition-transform duration-300 ease-in-out">
+        <div class="pt-20 px-6">
+            <!-- Navigation Links -->
+            <div class="space-y-6">
+                <a href="#" class="block text-lg font-bold text-gray-900 hover:text-teal-500 transition-colors">Home</a>
+                <a href="#" class="block text-lg text-gray-900 hover:text-teal-500 transition-colors">Pricing</a>
+                <a href="#" class="block text-lg text-gray-900 hover:text-teal-500 transition-colors">Features</a>
+                <a href="#" class="block text-lg text-gray-900 hover:text-teal-500 transition-colors">About</a>
+                <a href="#" class="block text-lg text-gray-900 hover:text-teal-500 transition-colors">Contact</a>
+            </div>
+            
+            <!-- Login Button -->
+            <div class="mt-8 pt-8 border-t border-gray-200">
+                <a href="#" class="block w-full text-center py-3 px-6 text-white bg-gray-900 hover:bg-gray-700 rounded-md transition duration-300">
+                    Login
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mobile Menu Backdrop -->
+    <div id="mobile-backdrop" class="fixed inset-0 bg-black/50 z-30 md:hidden opacity-0 pointer-events-none transition-opacity duration-300"></div>
+    <main>
+      <section
+        id="hero"
+        class="md:h-screen bg-body lg:pt-25 lg:pb-20 lg:px-25 md:pt-18 overflow-hidden md:pb-14 md:px-15 pt-24 pb-10 px-7 flex items-center justify-between flex-col md:flex-row"
+      >
+        <div class="text-section flex-1 text-center md:text-left">
+          <h1 class="md:text-6xl text-5xl text-dark-blue md:leading-25 leading-20 font-bold">
+            Save Image & Video
+          </h1>
+          <p class="text-lg text-dark-blue mt-4">
+            from Social Media with Easily and Free.
+          </p>
+          <span class="input-url relative">
+            <input
+              type="url"
+              name="url"
+              id="urlInput"
+              placeholder="Paste your link here"
+              class="mt-6 w-full max-w-md px-4 py-3 outline outline-dark-blue rounded-md focus:border-none focus:outline-2 focus:outline-dark-blue text-dark-blue transition ease-in-out duration-300"
+            />
+            <button
+              class="absolute right-1 top-1/2 transform -translate-y-1/2 btn-download bg-green-teal px-6 py-2.5 text-sm rounded-md hover:shadow-md focus:shadow-none cursor-pointer shadow-green-teal text-white transition ease-in-out duration-300 hover:bg-green-teal/80"
+            >
+              Download
+            </button>
+          </span>
+        </div>
+        <div class="image-section relative w-full h-full hidden md:block transform md:translate-y-15 md:-translate-x-1/5 lg:translate-x-0 lg:translate-y-6 flex-1">
+          <div
+            class="w-6 h-6 bg-green-teal absolute top-15 left-32 rounded-full"
+          ></div>
+          <img
+            class="absolute top-5 left-45 transform hover:scale-105 transition duration-300 ease-out"
+            src="./assets/img/instagram-hero.png"
+            alt="instagram"
+            width="140"
+          />
+          <div
+            class="w-9 h-9 bg-green-teal absolute top-5 left-95 rounded-full"
+          ></div>
+          <img
+            class="absolute top-35 left-20 transform hover:scale-105 transition duration-300 ease-out"
+            src="./assets/img/tiktok-hero.png"
+            alt="tiktok"
+            width="100"
+          />
+          <div
+            class="w-6 h-6 bg-green-teal absolute top-45 left-80 rounded-full"
+          ></div>
+          <img
+            class="absolute top-20 left-90 transform hover:scale-105 transition duration-300 ease-out"
+            src="./assets/img/twitter-hero.png"
+            alt="twitter"
+            width="140"
+          />
+          <div
+            class="w-8 h-8 bg-green-teal absolute top-65 left-30 rounded-full"
+          ></div>
+          <img
+            class="absolute top-45 left-40 transform hover:scale-105 transition duration-300 ease-out"
+            src="./assets/img/youtube-hero.png"
+            alt="youtube-hero"
+            width="185"
+          />
+          <img
+            class="absolute top-55 left-90 transform hover:scale-105 transition duration-300 ease-out"
+            src="./assets/img/facebook-hero.png"
+            alt="facebook-hero"
+            width="100"
+          />
+          <div
+            class="w-10 h-10 bg-green-teal absolute top-85 left-90 rounded-full"
+          ></div>
+        </div>
+      </section>
+      <section id="tagline" class="bg-body lg:py-20 lg:px-25 md:py-14 md:px-15 py-10 px-7 text-center">
+        <h2 class="font-medium text-2xl pb-1">
+          Simple and small things but always needed
+        </h2>
+        <p>
+          Fast system, performance will help you to make social media assets
+          saved with easily and free
+        </p>
+      </section>
+      <section id="howitworks" class="bg-body lg:py-20 lg:px-25 md:py-14 md:px-15 py-10 px-7">
+        <h2 class="text-center text-2xl font-medium md:pb-10 pb-5">How it works</h2>
+        <div class="flex justify-between lg:gap-20 gap-10 md:flex-row flex-col">
+          <div class="text-center flex-1">
+            <div class="step-image h-35 flex items-center justify-center mb-5">
+              <img
+                src="./assets/img/step-1.png"
+                alt="step 1"
+                class="md:w-full w-3/4 mx-auto"
+              />
+            </div>
+            <p>Paste your link from Youtube, Instagram, etc</p>
+            <div
+              class="rounded-full text-lg font-bold text-white bg-dark-blue w-8 h-8 flex items-center justify-center mx-auto mt-4"
+            >
+              1
+            </div>
+          </div>
+          <div class="text-center flex-1">
+            <div class="step-image h-35 flex items-center justify-center mb-5">
+              <img
+                src="./assets/img/step-2.png"
+                alt="step 2"
+                class="h-full mx-auto"
+              />
+            </div>
+            <p>Get and then download your image and video</p>
+            <div
+              class="rounded-full text-lg font-bold text-white bg-dark-blue w-8 h-8 flex items-center justify-center mx-auto mt-4"
+            >
+              2
+            </div>
+          </div>
+          <div class="text-center flex-1">
+            <div class="step-image h-35 flex items-center justify-center mb-5">
+              <img
+                src="./assets/img/step-3.png"
+                alt="step 3"
+                class="h-full mx-auto"
+              />
+            </div>
+            <p>Paste your link from Youtube, Instagram, etc</p>
+            <div
+              class="rounded-full text-lg font-bold text-white bg-dark-blue w-8 h-8 flex items-center justify-center mx-auto mt-4"
+            >
+              3
+            </div>
+          </div>
+        </div>
+      </section>
+      <section
+        id="feature-offers"
+        class="bg-body flex items-stretch justify-between flex-col md:flex-row"
+      >
+        <div
+          class="img-section w-full bg-[url(/assets/img/bg-feature-offers.png)] bg-cover flex items-center flex-1 bg-center bg-no-repeat lg:py-20 lg:pl-25 lg:pr-15 md:py-14 md:pl-15 md:pr-10 py-10 pl-7 pr-6 text-left"
+        >
+          <div>
+            <h1 class="text-white text-7xl font-medium max-w-md leading-25">
+              Featured Offers
+            </h1>
+            <p class="text-white">What will you get?</p>
+          </div>
+        </div>
+        <div class="feature-list lg:py-20 lg:pr-25 lg:pl-15 md:py-14 md:pr-15 md:pl-10 flex-1 space-y-5 py-10 pr-7 pl-6">
+          <div class="py-7 px-6 rounded-lg hover:shadow-md shadow-green-teal bg-green-teal relative transition duration-200 ease-out">
+            <div
+              class="badge-feature rounded-sm text-yellow-400 flex items-center justify-center text-xl px-1.5 absolute top-2 right-2 bg-white"
+            >
+              ★
+            </div>
+            <h3 class="text-white text-lg font-medium mb-1">
+              Access more features
+            </h3>
+            <p class="text-white text-sm">
+              You can access exlusive, get high quality content, unlimited
+              access feature
+            </p>
+          </div>
+          <div class="py-7 px-6 rounded-lg hover:shadow-md shadow-gray bg-white-cream relative transition duration-200 ease-out">
+            <div
+              class="badge-feature rounded-sm text-dark-blue flex items-center justify-center text-xs px-3 py-1 absolute top-2 right-2 bg-white"
+            >
+              Free
+            </div>
+            <h3 class="text-dark-blue text-lg font-medium mb-1">
+              Access feature with limit per day
+            </h3>
+            <p class="text-dark-blue text-sm">
+              You can access and use the feature with 10 credits per day
+            </p>
+          </div>
+          <div class="py-7 px-6 rounded-lg hover:shadow-md shadow-gray bg-white-cream relative transition duration-200 ease-out">
+            <div
+              class="badge-feature rounded-sm text-dark-blue flex items-center justify-center text-xs px-3 py-1 absolute top-2 right-2 bg-white"
+            >
+              Free
+            </div>
+            <h3 class="text-dark-blue text-lg font-medium mb-1">
+              Simple and easily to use
+            </h3>
+            <p class="text-dark-blue text-sm">
+              Get your video and image from social media by paste your link
+            </p>
+          </div>
+          <div class="py-7 px-6 rounded-lg hover:shadow-md shadow-gray bg-white-cream relative transition duration-200 ease-out">
+            <div
+              class="badge-feature rounded-sm text-dark-blue flex items-center justify-center text-xs px-3 py-1 absolute top-2 right-2 bg-white"
+            >
+              Free
+            </div>
+            <h3 class="text-dark-blue text-lg font-medium mb-1">
+              System with fast performance
+            </h3>
+            <p class="text-dark-blue text-sm">
+              Easy to access the feature and quickly get respond
+            </p>
+          </div>
+        </div>
+      </section>
+      <section id="testimonials" class=" bg-body text-center lg:py-20 lg:px-25 md:py-14 md:px-15 py-10 px-7">
+        <h1 class="text-dark-blue text-3xl font-semibold md:pb-10 pb-5">
+          What people say about Media<span class="text-green-teal"
+            >Catcher</span
+          >
+        </h1>
+        <div class="testimony flex items-center justify-between mx-auto flex-col md:flex-row">
+          <div
+            id="testimony-container"
+            class="testimony-photo relative flex-1 h-70 lg-text-left text-center md:pt-0 pt-40 md:mt-0 mt-4"
+          >
+            <!-- Foto utama (tidak bisa diklik) -->
+            <div
+              class="photo absolute overflow-hidden rounded-full active w-42 h-42 lg:bottom-0 bottom-1/2 lg:translate-y-0 translate-y-1/2 left-1/2 transform -translate-x-1/2 mb-4 border-6 border-green-teal z-10 transition-all duration-700 cursor-default will-change-transform"
+              data-index="0"
+              data-name="Zoey Jasmine"
+              data-role="Social media specialist"
+              data-message="Very reccomended if you have interest about social media and editing video, photo, music, etc. Very easily to use and fast performance, thanks for makes this tool."
+            >
+              <img
+                src="./assets/img/photo-testimony-1.jpg"
+                alt="Testimony 1"
+                class="w-full h-full object-cover"
+              />
+            </div>
+
+            <!-- Foto kecil (klik untuk swap posisi) -->
+            <div
+              class="photo absolute overflow-hidden lg:block hidden rounded-full w-24 h-24 top-4 right-24 border-5 border-gray-300 cursor-pointer transition-all duration-700 will-change-auto"
+              data-index="1"
+              data-photo="./assets/img/photo-testimony-2.jpg"
+              data-name="Lexy Brown"
+              data-role="Video Editor"
+              data-message="An amazing tool! It boosted my editing workflow significantly. Love the performance and ease of use."
+            >
+              <img
+                src="./assets/img/photo-testimony-2.jpg"
+                alt="Testimony 2"
+                class="w-full h-full object-cover"
+              />
+            </div>
+
+            <div
+              class="photo absolute overflow-hidden lg:block hidden rounded-full w-16 h-16 top-8 left-36 border-4 border-gray-300 cursor-pointer transition-all duration-700 will-change-auto"
+              data-index="2"
+              data-photo="./assets/img/photo-testimony-3.jpg"
+              data-name="Jay Park"
+              data-role="Musician"
+              data-message="Perfect for audio-visual content. Really intuitive and fast, I use it daily for my music projects."
+            >
+              <img
+                src="./assets/img/photo-testimony-3.jpg"
+                alt="Testimony 3"
+                class="w-full h-full object-cover"
+              />
+            </div>
+
+            <div
+              class="photo absolute overflow-hidden lg:block hidden rounded-full w-18 h-18 top-54 left-24 border-4 border-gray-300 cursor-pointer transition-all duration-700 will-change-auto"
+              data-index="3"
+              data-photo="./assets/img/photo-testimony-4.jpg"
+              data-name="Chris Lee"
+              data-role="Photographer"
+              data-message="A must-have for visual content creators. Clean design and super smooth performance."
+            >
+              <img
+                src="./assets/img/photo-testimony-4.jpg"
+                alt="Testimony 4"
+                class="w-full h-full object-cover"
+              />
+            </div>
+
+            <div
+              class="photo absolute overflow-hidden lg:block hidden rounded-full w-12 h-12 top-56 right-30 border-4 border-gray-300 cursor-pointer transition-all duration-700 will-change-auto"
+              data-index="4"
+              data-photo="./assets/img/photo-testimony-5.jpg"
+              data-name="Maya Kim"
+              data-role="Editor & Creator"
+              data-message="Best editing tool I have ever used! Makes everything seamless and saves time."
+            >
+              <img
+                src="./assets/img/photo-testimony-5.jpg"
+                alt="Testimony 5"
+                class="w-full h-full object-cover"
+              />
+            </div>
+          </div>
+
+          <!-- Text Testimoni -->
+          <div
+            id="testimony-text"
+            class="testimony-text flex-1 text-left py-4 md:pl-12 md:border-l-2 border-dark-blue"
+          >
+            <p
+              class="italic text-dark-blue pb-5 leading-7"
+              id="testimony-message"
+            >
+              Very reccomended if you have interest about social media and
+              editing video, photo, music, etc. Very easily to use and fast
+              performance, thanks for makes this tool.
+            </p>
+            <h5
+              id="testimony-name"
+              class="text-xs text-green-teal font-semibold"
+            >
+              Zoey Jasmine
+            </h5>
+            <p id="testimony-role" class="text-dark-blue text-xs">
+              Content creator and Social media specialist
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="footer px-7 py-10 bg-green-teal">
+        <div class="flex items-start justify-between flex-col lg:flex-row ">
+          <div class="logo-newsletter  lg:pb-0 pb-4">
+            <h1 class="text-white font-logo text-2xl font-bold pb-2">
+              MediaCatcher
+            </h1>
+            <h5 class="text-white text-md pb-1/2 font-medium">
+              Join our news letter
+            </h5>
+            <p class="text-sm text-white pb-2">
+              Exlusive offers and weekly updates
+            </p>
+            <span class="input-email-subscribe relative">
+              <form id="emailSubscribeForm">
+                <input
+                  type="email"
+                  name="email-subs"
+                  id="emailSubscribeInput"
+                  placeholder="Your link here"
+                  required
+                  class="w-70 px-4 py-2.5 border border-gray-300 bg-white rounded-md focus:outline-none focus:ring-1 text-sm text-dark-blue transition ease-in-out duration-300"
+                />
+                <button type="submit"
+                  class="overflow-hidden absolute cursor-pointer right-1 top-1/2 transform -translate-y-1/2 flex items-center justify-center btn-send-email-subscribe bg-dark-blue size-8 text-sm rounded-sm text-white transition ease-in-out duration-300 hover:bg-dark-blue/80"
+                >
+                  <svg
+                    class="size-4 transform group-focus:translate-x-10 transition ease-in-out duration-300"
+                    viewBox="0 0 18 19"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M0.0936552 2.29892C-0.402868 0.807874 1.17329 -0.527024 2.56241 0.208102L17.0712 7.88877C18.3075 8.54327 18.3075 10.3163 17.0712 10.9708L2.56241 18.6515C1.17316 19.3867 -0.403272 18.0509 0.0936552 16.5597L2.44424 9.50693C2.4608 9.45725 2.46073 9.4033 2.44424 9.35361L0.0936552 2.29892ZM1.86026 1.5333C1.66707 1.43147 1.44765 1.61798 1.51651 1.82529L3.80166 8.67978H10.1708C10.5849 8.67978 10.9207 9.0157 10.9208 9.42978C10.9207 9.84388 10.5849 10.1798 10.1708 10.1798H3.80166L1.51651 17.0343C1.44769 17.2417 1.66797 17.4276 1.86123 17.3253L16.369 9.64365C16.541 9.55257 16.5419 9.3061 16.37 9.21494L1.86026 1.5333Z"
+                      fill="white"
+                    />
+                  </svg>
+                </button>
+              </form>
+            </span>
+          </div>
+          <div class="nav-footer flex items-start justify-between space-x-20 space-y-5 space flex-wrap sm:flex-row flex-col">
+            <div class="space-y-2">
+              <h5 class="text-white text-md font-semibold">Customer Services</h5>
+              <p><a href="#" class="text-sm text-white hover:text-gray-300">Contact us</a></p>
+              <p><a href="#" class="text-sm text-white hover:text-gray-300">Terms & Conditions</a></p>
+              <p><a href="#" class="text-sm text-white hover:text-gray-300">Privacy Policy</a></p>
+            </div>
+            <div class="space-y-2">
+              <h5 class="text-white text-md font-semibold">Navigate</h5>
+              <p><a href="#" class="text-sm text-white hover:text-gray-300">Pricing</a></p>
+              <p><a href="#" class="text-sm text-white hover:text-gray-300">How to use</a></p>
+              <p><a href="#" class="text-sm text-white hover:text-gray-300">About</a></p>
+            </div>
+            <div class="space-y-2">
+              <h5 class="text-white text-md font-semibold">Learn</h5>
+              <p><a href="#" class="text-sm text-white hover:text-gray-300">Blog</a></p>
+              <p><a href="#" class="text-sm text-white hover:text-gray-300">Tutorials</a></p>
+            </div>
+            <div class="space-y-2">
+              <h5 class="text-white text-md font-semibold">Social Media</h5>
+              <p><a href="#" class="text-sm text-white hover:text-gray-300">Facebook</a></p>
+              <p><a href="#" class="text-sm text-white hover:text-gray-300">Instagram</a></p>
+              <p><a href="#" class="text-sm text-white hover:text-gray-300">Youtube</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="./js/script.js"></script>
+  </body>
+</html>

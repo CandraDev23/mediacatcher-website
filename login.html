@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Media Catcher</title>
+    <!-- Tailwind CSS -->
+    <link rel="stylesheet" href="./src/output.css" />
+  </head>
+  <body>
+    <!-- Desktop Navbar (your existing code) -->
+    <nav
+      class="sticky top-0 left-0 right-0 bg-white px-7 hidden py-4 md:flex items-center z-50"
+    >
+      <a href="#" class="lg:text-2xl text-lg font-bold flex space-x-px">
+        <span class="text-gray-900">Media</span>
+        <span class="text-green-teal">Catcher</span>
+      </a>
+      <div class="space-x-8 md:ml-auto md:mr-0 mx-auto">
+        <a href="index.html" class="hover:text-black/50">Home</a>
+        <a href="pricing.html" class="font-semibold hover:text-black/50"
+          >Pricing</a
+        >
+        <a href="index.html#feature-offers" class="hover:text-black/50"
+          >Features</a
+        >
+        <a href="index.html#testimonials" class="hover:text-black/50">Review</a>
+        <a href="contact.html" class="hover:text-black/50">Contact</a>
+      </div>
+      <div class="lg:pl-12 md:pl-6">
+        <a
+          href="#"
+          class="py-2.5 px-10 text-white bg-gray-900 transition duration-300 ease-in-out hover:bg-gray-700 rounded-md"
+          >Login</a
+        >
+      </div>
+    </nav>
+
+    <!-- Mobile Navbar -->
+    <nav
+      class="sticky top-0 left-0 right-0 bg-white px-4 py-4 md:hidden flex items-center justify-between z-50"
+    >
+      <!-- Logo -->
+      <a href="#" class="text-xl font-bold flex space-x-px">
+        <span class="text-gray-900">Media</span>
+        <span class="text-green-teal">Catcher</span>
+      </a>
+
+      <!-- Hamburger Menu Button -->
+      <button
+        id="mobile-menu-button"
+        class="flex flex-col w-6 h-5 justify-between"
+      >
+        <span
+          class="block w-6 h-0.5 bg-gray-900 transition-all duration-300 ease-in-out"
+        ></span>
+        <span
+          class="block w-6 h-0.5 bg-gray-900 transition-all duration-300 ease-in-out"
+        ></span>
+        <span
+          class="block w-6 h-0.5 bg-gray-900 transition-all duration-300 ease-in-out"
+        ></span>
+      </button>
+    </nav>
+
+    <!-- Mobile Menu Overlay -->
+    <div
+      id="mobile-menu"
+      class="fixed top-0 left-0 w-full h-full bg-white z-40 md:hidden transform -translate-x-full transition-transform duration-300 ease-in-out"
+    >
+      <div class="pt-20 px-6">
+        <!-- Navigation Links -->
+        <div class="space-y-6">
+          <a
+            href="index.html"
+            class="block text-lg text-gray-900 hover:text-teal-500 transition-colors"
+            >Home</a
+          >
+          <a
+            href="pricing.html"
+            class="block text-lg text-gray-900 font-semibold hover:text-teal-500 transition-colors"
+            >Pricing</a
+          >
+          <a
+            href="index.html#feature-offers"
+            class="block text-lg text-gray-900 hover:text-teal-500 transition-colors"
+            >Features</a
+          >
+          <a
+            href="index.html#testimonials"
+            class="block text-lg text-gray-900 hover:text-teal-500 transition-colors"
+            >Review</a
+          >
+          <a
+            href="contact.html"
+            class="block text-lg text-gray-900 hover:text-teal-500 transition-colors"
+            >Contact</a
+          >
+        </div>
+
+        <!-- Login Button -->
+        <div class="mt-8 pt-8 border-t border-gray-200">
+          <a
+            href="#"
+            class="block w-full text-center py-3 px-6 text-white bg-gray-900 hover:bg-gray-700 rounded-md transition duration-300"
+          >
+            Login
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile Menu Backdrop -->
+    <div
+      id="mobile-backdrop"
+      class="fixed inset-0 bg-black/50 z-30 md:hidden opacity-0 pointer-events-none transition-opacity duration-300"
+    ></div>
+
+    <main>
+      <section
+        id="pricing"
+        class="lg:py-15 lg:px-25 md:py-10 md:px-15 py-8 px-7 min-h-screen bg-body"
+      >
+        <h1 class="text-dark-blue text-3xl font-semibold md:pb-3 pb-1">
+          Pricing
+        </h1>
+        <p class="text-sm text-gray-400">
+          Enjoy unlimited downloads with priority access and premium support.
+        </p>
+        <div
+          class="container-pricing grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:mt-10 mt-6"
+        >
+          <div
+            class="card-pricing px-8 py-7 bg-white rounded-lg shadow shadow-gray-300 flex flex-col"
+          >
+            <h2 class="text-xl font-medium mb-6 text-dark-blue">Free</h2>
+            <p class="mb-8 text-dark-blue">
+              <span class="text-4xl font-medium pr-2">IDR 0</span
+              ><span class="text-sm font-medium">/ month</span>
+            </p>
+            <ul class="list-disc list-inside space-y-3 mb-10 text-dark-blue">
+              <li>Download from YouTube & Instagram</li>
+              <li>Standard download speed</li>
+              <li>Max resolution 720p</li>
+              <li>5 downloads per day</li>
+              <li>Basic formats (MP4, MP3)</li>
+            </ul>
+            <button
+              class="bg-white mt-auto text-dark-blue border border-dark-blue w-full cursor-pointer py-2 rounded-md hover:bg-dark-blue hover:text-white transition duration-300 ease-in-out"
+            >
+              Get Started for Free
+            </button>
+          </div>
+
+          <div
+            class="card-pricing px-8 py-7 bg-white rounded-lg shadow shadow-gray-300 flex flex-col relative"
+          >
+            <div
+              class="badge-hot-plan absolute top-7 right-8 bg-orange-400 text-white text-xs font-semibold px-2 py-1 rounded-sm"
+            >
+              🔥Hot
+            </div>
+            <h2 class="text-xl font-medium mb-6 text-dark-blue">Pro</h2>
+            <p class="mb-8 text-dark-blue">
+              <span class="text-4xl font-medium pr-2">IDR 12000</span
+              ><span class="text-sm font-medium">/ month</span>
+            </p>
+            <ul class="list-disc list-inside space-y-3 mb-10 text-dark-blue">
+              <li>Download from all major platforms</li>
+              <li>Faster download speed</li>
+              <li>Max resolution 1080p</li>
+              <li>Unlimited downloads</li>
+              <li>Multiple formats (MP4, MP3, WEBM)</li>
+              <li>Batch/multiple downloads</li>
+              <li>No ads</li>
+              <li>Basic download history</li>
+            </ul>
+            <button
+              class="bg-white mt-auto text-dark-blue border w-full cursor-pointer border-dark-blue py-2 rounded-md hover:text-white hover:bg-dark-blue transition duration-300 ease-in-out"
+            >
+              Get Started with Pro
+            </button>
+          </div>
+
+          <div
+            class="card-pricing px-8 py-7 bg-dark-blue rounded-lg border shadow shadow-gray-300 relative flex flex-col"
+          >
+            <h2 class="text-xl font-medium mb-6 text-white">Premium</h2>
+            <p class="mb-8 text-white">
+              <span class="text-4xl font-medium pr-2">IDR 32000</span
+              ><span class="text-sm font-medium">/ month</span>
+            </p>
+            <ul class="list-disc list-inside space-y-3 mb-10 text-white">
+              <li>All platform support</li>
+              <li>Max download speed</li>
+              <li>Max resolution 4K / 8K</li>
+              <li>Unlimited downloads</li>
+              <li>All formats + advanced conversion</li>
+              <li>Batch downloads</li>
+              <li>No ads or watermark</li>
+              <li>Cloud storage (Google Drive, Dropbox)</li>
+              <li>Download history & resume feature</li>
+            </ul>
+            <button
+              class="text-dark-blue mt-auto border w-full cursor-pointer border-white bg-white py-2 rounded-md hover:bg-white/80 transition duration-300 ease-in-out"
+            >
+              Get Started with Premium
+            </button>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="footer px-7 py-10 bg-green-teal">
+        <div class="flex items-start justify-between flex-col lg:flex-row">
+          <div class="logo-newsletter lg:pb-0 pb-4">
+            <h1 class="text-white font-logo text-2xl font-bold pb-2">
+              MediaCatcher
+            </h1>
+            <h5 class="text-white text-md pb-1/2 font-medium">
+              Join our news letter
+            </h5>
+            <p class="text-sm text-white pb-2">
+              Exlusive offers and weekly updates
+            </p>
+            <span class="input-email-subscribe relative">
+              <form id="emailSubscribeForm">
+                <input
+                  type="email"
+                  name="email-subs"
+                  id="emailSubscribeInput"
+                  placeholder="Your link here"
+                  required
+                  class="w-70 px-4 py-2.5 border border-gray-300 bg-white rounded-md focus:outline-none focus:ring-1 text-sm text-dark-blue transition ease-in-out duration-300"
+                />
+                <button
+                  type="submit"
+                  class="overflow-hidden absolute cursor-pointer right-1 top-1/2 transform -translate-y-1/2 flex items-center justify-center btn-send-email-subscribe bg-dark-blue size-8 text-sm rounded-sm text-white transition ease-in-out duration-300 hover:bg-dark-blue/80"
+                >
+                  <svg
+                    class="size-4 transform group-focus:translate-x-10 transition ease-in-out duration-300"
+                    viewBox="0 0 18 19"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M0.0936552 2.29892C-0.402868 0.807874 1.17329 -0.527024 2.56241 0.208102L17.0712 7.88877C18.3075 8.54327 18.3075 10.3163 17.0712 10.9708L2.56241 18.6515C1.17316 19.3867 -0.403272 18.0509 0.0936552 16.5597L2.44424 9.50693C2.4608 9.45725 2.46073 9.4033 2.44424 9.35361L0.0936552 2.29892ZM1.86026 1.5333C1.66707 1.43147 1.44765 1.61798 1.51651 1.82529L3.80166 8.67978H10.1708C10.5849 8.67978 10.9207 9.0157 10.9208 9.42978C10.9207 9.84388 10.5849 10.1798 10.1708 10.1798H3.80166L1.51651 17.0343C1.44769 17.2417 1.66797 17.4276 1.86123 17.3253L16.369 9.64365C16.541 9.55257 16.5419 9.3061 16.37 9.21494L1.86026 1.5333Z"
+                      fill="white"
+                    />
+                  </svg>
+                </button>
+              </form>
+            </span>
+          </div>
+          <div class="nav-footer flex items-start justify-between space-x-20 space-y-5 space flex-wrap sm:flex-row flex-col">
+            <div class="space-y-2">
+              <h5 class="text-white text-md font-semibold">Customer Services</h5>
+              <p><a href="contact.html" class="text-sm text-white hover:text-gray-300">Contact us</a></p>
+              <p><a href="#" class="text-sm text-white hover:text-gray-300">Terms & Conditions</a></p>
+              <p><a href="#" class="text-sm text-white hover:text-gray-300">Privacy Policy</a></p>
+            </div>
+            <div class="space-y-2">
+              <h5 class="text-white text-md font-semibold">Navigate</h5>
+              <p><a href="pricing.html" class="text-sm text-white hover:text-gray-300">Pricing</a></p>
+              <p><a href="index.html#how-to-use" class="text-sm text-white hover:text-gray-300">How to use</a></p>
+              <p><a href="index.html#how-to-use" class="text-sm text-white hover:text-gray-300">Review</a></p>
+            </div>
+            <div class="space-y-2">
+              <h5 class="text-white text-md font-semibold">Learn</h5>
+              <p><a href="#" class="text-sm text-white hover:text-gray-300">Blog</a></p>
+              <p><a href="#" class="text-sm text-white hover:text-gray-300">Tutorials</a></p>
+            </div>
+            <div class="space-y-2">
+              <h5 class="text-white text-md font-semibold">Social Media</h5>
+              <p><a href="#" class="text-sm text-white hover:text-gray-300">Facebook</a></p>
+              <p><a href="#" class="text-sm text-white hover:text-gray-300">Instagram</a></p>
+              <p><a href="#" class="text-sm text-white hover:text-gray-300">Youtube</a></p>
+            </div>
+          </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="./js/script.js"></script>
+  </body>
+</html>

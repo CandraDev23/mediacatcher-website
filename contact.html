@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="./src/output.css" />
   </head>
   <body>
-    <!-- Desktop Navbar (your existing code) -->
+    <!-- Desktop Navbar -->
     <nav
       class="sticky top-0 left-0 right-0 bg-white px-7 hidden py-4 md:flex items-center z-50"
     >
@@ -29,7 +29,7 @@
       </div>
       <div class="lg:pl-12 md:pl-6">
         <a
-          href="#"
+          href="login.html"
           class="py-2.5 px-10 text-white bg-gray-900 transition duration-300 ease-in-out hover:bg-gray-700 rounded-md"
           >Login</a
         >
@@ -101,7 +101,7 @@
         <!-- Login Button -->
         <div class="mt-8 pt-8 border-t border-gray-200">
           <a
-            href="#"
+            href="login"
             class="block w-full text-center py-3 px-6 text-white bg-gray-900 hover:bg-gray-700 rounded-md transition duration-300"
           >
             Login
@@ -119,15 +119,19 @@
     <main>
       <section
         id="contact-us"
-        class="lg:py-15 lg:px-25 md:py-10 md:px-15 py-8 px-7  bg-body"
+        class="flex flex-row"
       >
+      <div class="flex-1 sm:block hidden">
+        <img src="./assets/img/photo-contact-us.jpg" class="h-full object-cover" alt="photo contactus">
+      </div>
+      <div class=" bg-body flex-1">
         <div
-          class="mx-auto lg:w-3/4 w-full p-9 bg-white rounded-lg border border-gray-300"
+          class="mx-auto lg:py-15 lg:px-25 md:py-10 md:px-15 py-8 px-7 "
         >
           <h1 class="text-dark-blue text-3xl font-semibold md:mb-2 mb-1">
             Contact us
           </h1>
-          <p class="md:pb-5 pb-2 text-sm text-gray-400">
+          <p class="md:pb-5 pb-2 text-gray-400">
             Please fill out the form below to get in touch with us
           </p>
           <form id="contactForm">
@@ -186,6 +190,7 @@
             </div>
           </form>
         </div>
+      </div>
       </section>
     </main>
     <footer>

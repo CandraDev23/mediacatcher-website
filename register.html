@@ -9,10 +9,10 @@
   </head>
   <body>
     <main>
-      <section id="contact-us" class="flex flex-row sm:h-160 h-dvh">
+      <section id="contact-us" class="flex flex-row sm:h-200 h-dvh">
         <div class="flex-1 sm:block hidden overflow-hidden">
           <img
-            src="./assets/img/photo-login.jpg"
+            src="./assets/img/photo-register.jpg"
             class="size-full object-cover"
             alt="photo login"
           />
@@ -20,13 +20,28 @@
         <div class="bg-body flex-1 flex items-center">
           <div class="flex-1 lg:py-15 lg:px-25 md:py-10 md:px-15 py-8 px-7">
             <h1 class="text-dark-blue text-3xl font-semibold md:mb-2 mb-1">
-              Login to MediaCatcher
+              Create Your Account
             </h1>
             <p class="md:pb-5 pb-2 text-gray-400">
-              Welcome back! Please log in to your MediaCatcher account.
+              Sign up to access all features and stay connected.
             </p>
             <form id="contactForm">
               <div class="space-y-3">
+                <div class="input-group">
+                  <label
+                    for="name"
+                    class="block mb-1 text-sm font-medium text-gray-700"
+                    >Name</label
+                  >
+                  <input
+                    type="name"
+                    name="name"
+                    id="name"
+                    required
+                    placeholder="Your name"
+                    class="w-full px-4 py-2.5 border border-gray-300 bg-white rounded-md focus:outline-none focus:ring-1 text-sm text-dark-blue transition ease-in-out duration-300"
+                  />
+                </div>
                 <div class="input-group">
                   <label
                     for="email"
@@ -57,19 +72,34 @@
                     class="w-full px-4 py-2.5 border border-gray-300 bg-white rounded-md focus:outline-none focus:ring-1 text-sm text-dark-blue transition ease-in-out duration-300"
                   />
                 </div>
+                <div class="input-group">
+                  <label
+                    for="confirm-password"
+                    class="block mb-1 text-sm font-medium text-gray-700"
+                    >Password Confirmation</label
+                  >
+                  <input
+                    type="password"
+                    name="password-confirmation"
+                    id="password-confirmation"
+                    required
+                    placeholder="Confirm your password"
+                    class="w-full px-4 py-2.5 border border-gray-300 bg-white rounded-md focus:outline-none focus:ring-1 text-sm text-dark-blue transition ease-in-out duration-300"
+                  />
+                </div>
                 <button
                   type="submit"
-                  class="btn-login bg-dark-blue py-2.5 px-12 w-full mt-3 rounded-md cursor-pointer text-white hover:bg-dark-blue/80"
+                  class="btn-register bg-dark-blue py-2.5 px-12 w-full mt-3 rounded-md cursor-pointer text-white hover:bg-dark-blue/80"
                 >
-                  Login
+                  Sign up
                 </button>
               </div>
             </form>
             <div class="another-option text-center mt-5">
               <p class="text-dark-blue">
-                Don't have an account?
-                <a href="register.html" class="text-green-teal font-semibold"
-                  >Sign up</a
+                Already have an account?
+                <a href="login.html" class="text-green-teal font-semibold"
+                  >Login</a
                 >
               </p>
               <div class="login-with text-dark-blue mt-10">
